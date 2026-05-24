@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: #030b14;
+  color: #ddeeff;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #071428; }
+::-webkit-scrollbar-thumb { background: #1a3a5c; border-radius: 4px; }
+
+input, select, textarea, button { font-family: 'Exo 2', sans-serif; }
+input::placeholder { color: #1e3a56; }
+button:focus, input:focus, select:focus { outline: none; }
+select option { background: #071428; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .35; }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 6px #00e57630; }
+  50%       { box-shadow: 0 0 22px #00e57660; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes scanline {
+  0%   { top: -20%; }
+  100% { top: 120%; }
+}
+
+.fu       { animation: fadeUp .35s ease both; }
+.glow-btn { animation: glow 2s ease infinite; }
+.spin     { animation: spin .7s linear infinite; }
